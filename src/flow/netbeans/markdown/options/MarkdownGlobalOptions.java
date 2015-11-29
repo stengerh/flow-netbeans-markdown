@@ -60,117 +60,30 @@ public final class MarkdownGlobalOptions {
     private MarkdownGlobalOptions() {
     }
 
-    private void bindPreferences() {
-        abbreviations = isAbbreviations();
-        autoLinks = isAutoLinks();
-        definitions = isDefinitions();
-        fencedCodeBlocks = isFencedCodeBlocks();
-        hardWraps = isHardWraps();
-        suppressHTMLBlocks = isSuppressHTMLBlocks();
-        suppressInlineHTML = isSuppressInlineHTML();
-        quotes = isQuotes();
-        smarts = isSmarts();
-        tables = isTables();
-        wikiLinks = isWikiLinks();
-        strikeThrough = isStrikeThrough();
-        anchorLinks = isAnchorLinks();
-        atxHeaderSpace = isAtxHeaderSpace();
-        forceListItemPara = isForceListItemPara();
-        relaxedHRules = isRelaxedHRules();
-        taskListItems = isTaskListItems();
-        extAnchorLinks = isExtAnchorLinks();
-    }
-
-    /**
-     * Whether the "SmartyPants style pretty ellipsises, dashes and apostrophes"
-     * extension should be enabled.
-     */
-    private boolean smarts = false;
-    /**
-     * Whether the "SmartyPants style pretty single and double quotes" extension
-     * should be enabled.
-     */
-    private boolean quotes = false;
-    /**
-     * Whether the "PHP Markdown Extra style abbreviations" extension should be
-     * enabled.
-     */
-    private boolean abbreviations = false;
-    /**
-     * Whether the "PHP Markdown Extra style definition lists" extension should
-     * be enabled.
-     */
-    private boolean definitions = false;
-    /**
-     * Whether the "PHP Markdown Extra style fenced code blocks" extension
-     * should be enabled.
-     */
-    private boolean fencedCodeBlocks = false;
-    /**
-     * Whether the "Github style hard wraps parsing as HTML linebreaks"
-     * extension should be enabled.
-     */
-    private boolean hardWraps = false;
-    /**
-     * Whether the "Github style plain auto-links" extension should be enabled.
-     */
-    private boolean autoLinks = false;
-    /**
-     * Whether the "Wiki-style links" extension should be enabled.
-     */
-    private boolean wikiLinks = false;
-    /**
-     * Whether the "MultiMarkdown style tables support" extension should be
-     * enabled.
-     */
-    private boolean tables = false;
-    /**
-     * Whether the "StrikeThrough" extension should be
-     * enabled.
-     */
-    private boolean strikeThrough = false;
-    /**
-     * Whether the "Suppress HTML blocks" extension should be enabled.
-     */
-    private boolean suppressHTMLBlocks = false;
-    /**
-     * Whether the "Suppress inline HTML tags" extension should be enabled.
-     */
-    private boolean suppressInlineHTML = false;
-
-    private boolean anchorLinks = false;
-    private boolean atxHeaderSpace = false;
-    private boolean forceListItemPara = false;
-    private boolean relaxedHRules = false;
-    private boolean taskListItems = false;
-    private boolean extAnchorLinks = false;
-
     /**
      * Get the extensions value to setup PegDown parser with.
      *
      * @return the value to use with {@link org.pegdown.PegDownProcessor(int)}
      */
     public int getExtensionsValue() {
-        bindPreferences();
-
-        return (smarts ? Extensions.SMARTS : 0)
-                + (quotes ? Extensions.QUOTES : 0)
-                + (abbreviations ? Extensions.ABBREVIATIONS : 0)
-                + (hardWraps ? Extensions.HARDWRAPS : 0)
-                + (autoLinks ? Extensions.AUTOLINKS : 0)
-                + (wikiLinks ? Extensions.WIKILINKS : 0)
-                + (tables ? Extensions.TABLES : 0)
-                + (definitions ? Extensions.DEFINITIONS : 0)
-                + (fencedCodeBlocks ? Extensions.FENCED_CODE_BLOCKS : 0)
-                + (suppressHTMLBlocks ? Extensions.SUPPRESS_HTML_BLOCKS : 0)
-                + (suppressInlineHTML ? Extensions.SUPPRESS_INLINE_HTML : 0)
-                + (strikeThrough ? Extensions.STRIKETHROUGH : 0)
-                + (anchorLinks ? Extensions.ANCHORLINKS : 0)
-                + (atxHeaderSpace ? Extensions.ATXHEADERSPACE : 0)
-                + (forceListItemPara ? Extensions.FORCELISTITEMPARA : 0)
-                + (relaxedHRules ? Extensions.RELAXEDHRULES : 0)
-                + (taskListItems ? Extensions.TASKLISTITEMS : 0)
-                + (extAnchorLinks ? Extensions.EXTANCHORLINKS : 0);
+        return (isSmarts() ? Extensions.SMARTS : 0)
+                + (isQuotes() ? Extensions.QUOTES : 0)
+                + (isAbbreviations() ? Extensions.ABBREVIATIONS : 0)
+                + (isHardWraps() ? Extensions.HARDWRAPS : 0)
+                + (isAutoLinks() ? Extensions.AUTOLINKS : 0)
+                + (isWikiLinks() ? Extensions.WIKILINKS : 0)
+                + (isTables() ? Extensions.TABLES : 0)
+                + (isDefinitions() ? Extensions.DEFINITIONS : 0)
+                + (isFencedCodeBlocks() ? Extensions.FENCED_CODE_BLOCKS : 0)
+                + (isSuppressHTMLBlocks() ? Extensions.SUPPRESS_HTML_BLOCKS : 0)
+                + (isSuppressInlineHTML() ? Extensions.SUPPRESS_INLINE_HTML : 0)
+                + (isStrikeThrough() ? Extensions.STRIKETHROUGH : 0)
+                + (isAnchorLinks() ? Extensions.ANCHORLINKS : 0)
+                + (isAtxHeaderSpace() ? Extensions.ATXHEADERSPACE : 0)
+                + (isForceListItemPara() ? Extensions.FORCELISTITEMPARA : 0)
+                + (isRelaxedHRules() ? Extensions.RELAXEDHRULES : 0)
+                + (isTaskListItems() ? Extensions.TASKLISTITEMS : 0)
+                + (isExtAnchorLinks() ? Extensions.EXTANCHORLINKS : 0);
     }
 
     public boolean isSmarts() {
