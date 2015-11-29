@@ -33,6 +33,12 @@ public final class MarkdownGlobalOptions {
     private static final String STRIKETHROUGH = "STRIKETHROUGH"; // NOI18N
     private static final String HTML_BLOCK_SUPPRESSION = "HTML_BLOCK_SUPPRESSION"; // NOI18N
     private static final String INLINE_HTML_SUPPRESSION = "INLINE_HTML_SUPPRESSION"; // NOI18N
+    private static final String ANCHORLINKS = "ANCHORLINKS"; // NOI18N
+    private static final String ATXHEADERSPACE = "ATXHEADERSPACE"; // NOI18N
+    private static final String FORCELISTITEMPARA = "FORCELISTITEMPARA"; // NOI18N
+    private static final String RELAXEDHRULES = "RELAXEDHRULES"; // NOI18N
+    private static final String TASKLISTITEMS = "TASKLISTITEMS"; // NOI18N
+    private static final String EXTANCHORLINKS = "EXTANCHORLINKS"; // NOI18N
     private static final String HTML_TEMPLATE = "HTML_TEMPLATE"; // NOI18N
     private static final String VIEW_HTML_ON_SAVE = "VIEW_HTML_ON_SAVE"; // NOI18N
     private static final String SAVE_IN_SOURCE_DIR = "SAVE_IN_SOURCE_DIR"; // NOI18N
@@ -51,7 +57,6 @@ public final class MarkdownGlobalOptions {
     public static MarkdownGlobalOptions getInstance() {
         return INSTANCE;
     }
-
     private MarkdownGlobalOptions() {
     }
 
@@ -68,6 +73,12 @@ public final class MarkdownGlobalOptions {
         tables = isTables();
         wikiLinks = isWikiLinks();
         strikeThrough = isStrikeThrough();
+        anchorLinks = isAnchorLinks();
+        atxHeaderSpace = isAtxHeaderSpace();
+        forceListItemPara = isForceListItemPara();
+        relaxedHRules = isRelaxedHRules();
+        taskListItems = isTaskListItems();
+        extAnchorLinks = isExtAnchorLinks();
     }
 
     /**
@@ -127,6 +138,13 @@ public final class MarkdownGlobalOptions {
      */
     private boolean suppressInlineHTML = false;
 
+    private boolean anchorLinks = false;
+    private boolean atxHeaderSpace = false;
+    private boolean forceListItemPara = false;
+    private boolean relaxedHRules = false;
+    private boolean taskListItems = false;
+    private boolean extAnchorLinks = false;
+
     /**
      * Get the extensions value to setup PegDown parser with.
      *
@@ -146,7 +164,13 @@ public final class MarkdownGlobalOptions {
                 + (fencedCodeBlocks ? Extensions.FENCED_CODE_BLOCKS : 0)
                 + (suppressHTMLBlocks ? Extensions.SUPPRESS_HTML_BLOCKS : 0)
                 + (suppressInlineHTML ? Extensions.SUPPRESS_INLINE_HTML : 0)
-                + (strikeThrough ? Extensions.STRIKETHROUGH : 0);
+                + (strikeThrough ? Extensions.STRIKETHROUGH : 0)
+                + (anchorLinks ? Extensions.ANCHORLINKS : 0)
+                + (atxHeaderSpace ? Extensions.ATXHEADERSPACE : 0)
+                + (forceListItemPara ? Extensions.FORCELISTITEMPARA : 0)
+                + (relaxedHRules ? Extensions.RELAXEDHRULES : 0)
+                + (taskListItems ? Extensions.TASKLISTITEMS : 0)
+                + (extAnchorLinks ? Extensions.EXTANCHORLINKS : 0);
     }
 
     public boolean isSmarts() {
@@ -243,6 +267,54 @@ public final class MarkdownGlobalOptions {
 
     public void setSuppressInlineHTML(boolean suppressInlineHTML) {
         getPreferences().putBoolean(INLINE_HTML_SUPPRESSION, suppressInlineHTML);
+    }
+
+    public boolean isAnchorLinks() {
+        return getPreferences().getBoolean(ANCHORLINKS, false);
+    }
+
+    public void setAnchorLinks(boolean anchorLinks) {
+        getPreferences().putBoolean(ANCHORLINKS, anchorLinks);
+    }
+
+    public boolean isAtxHeaderSpace() {
+        return getPreferences().getBoolean(ATXHEADERSPACE, false);
+    }
+
+    public void setAtxHeaderSpace(boolean atxHeaderSpace) {
+        getPreferences().putBoolean(ATXHEADERSPACE, atxHeaderSpace);
+    }
+
+    public boolean isForceListItemPara() {
+        return getPreferences().getBoolean(FORCELISTITEMPARA, false);
+    }
+
+    public void setForceListItemPara(boolean forceListItemPara) {
+        getPreferences().putBoolean(FORCELISTITEMPARA, forceListItemPara);
+    }
+
+    public boolean isRelaxedHRules() {
+        return getPreferences().getBoolean(RELAXEDHRULES, false);
+    }
+
+    public void setRelaxedHRules(boolean relaxedHRules) {
+        getPreferences().putBoolean(RELAXEDHRULES, relaxedHRules);
+    }
+
+    public boolean isTaskListItems() {
+        return getPreferences().getBoolean(TASKLISTITEMS, false);
+    }
+
+    public void setTaskListItems(boolean taskListItems) {
+        getPreferences().putBoolean(TASKLISTITEMS, taskListItems);
+    }
+
+    public boolean isExtAnchorLinks() {
+        return getPreferences().getBoolean(EXTANCHORLINKS, false);
+    }
+
+    public void setExtAnchorLinks(boolean extAnchorLinks) {
+        getPreferences().putBoolean(EXTANCHORLINKS, extAnchorLinks);
     }
 
     public String getHtmlTemplate() {
