@@ -23,8 +23,4 @@ public class ExportSerializer extends ToHtmlSerializer {
         }
         printer.print(" />");
     }
-    
-    private void printAttribute(String name, String value) {
-        printer.print(' ').print(name).print('=').print('"').print(value).print('"');
-    }
 }
