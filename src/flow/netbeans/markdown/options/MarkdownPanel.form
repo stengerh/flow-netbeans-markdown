@@ -52,20 +52,36 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="INLINE_HTML_SUPPRESSION" min="-2" max="-2" attributes="0"/>
-                                      <Component id="SMARTS" max="32767" attributes="0"/>
-                                      <Component id="QUOTES" max="32767" attributes="0"/>
-                                      <Component id="ABBREVIATIONS" max="32767" attributes="0"/>
-                                      <Component id="HARDWRAPS" max="32767" attributes="0"/>
-                                      <Component id="AUTOLINKS" max="32767" attributes="0"/>
-                                      <Component id="TABLES" max="32767" attributes="0"/>
                                       <Component id="DEFINITION_LISTS" max="32767" attributes="0"/>
                                       <Component id="FENCED_CODE_BLOCKS" max="32767" attributes="0"/>
                                       <Component id="HTML_BLOCK_SUPPRESSION" max="32767" attributes="0"/>
                                       <Component id="WIKILINKS" alignment="0" min="-2" pref="412" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="SMARTS" max="32767" attributes="0"/>
+                                              <Component id="QUOTES" max="32767" attributes="0"/>
+                                              <Component id="ABBREVIATIONS" max="32767" attributes="0"/>
+                                              <Component id="HARDWRAPS" max="32767" attributes="0"/>
+                                              <Component id="AUTOLINKS" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="TABLES" min="-2" pref="109" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="TASKLISTITEMS" max="32767" attributes="0"/>
+                                              <Component id="RELAXEDHRULES" max="32767" attributes="0"/>
+                                              <Component id="FORCELISTITEMPARA" max="32767" attributes="0"/>
+                                              <Component id="ATXHEADERSPACE" max="32767" attributes="0"/>
+                                              <Component id="ANCHORLINKS" max="32767" attributes="0"/>
+                                              <Component id="EXTANCHORLINKS" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
                                   </Group>
                                   <Component id="STRIKETHROUGH" alignment="0" min="-2" pref="412" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -77,17 +93,35 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="EXTENSIONS_PANEL_HEADER" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                      <Component id="SMARTS" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="SMARTS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ANCHORLINKS" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="QUOTES" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="QUOTES" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ATXHEADERSPACE" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="ABBREVIATIONS" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="ABBREVIATIONS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="FORCELISTITEMPARA" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="HARDWRAPS" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="HARDWRAPS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="RELAXEDHRULES" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="AUTOLINKS" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="AUTOLINKS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TASKLISTITEMS" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="TABLES" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="EXTANCHORLINKS" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="TABLES" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="DEFINITION_LISTS" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -100,7 +134,7 @@
                       <Component id="WIKILINKS" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="STRIKETHROUGH" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -163,13 +197,13 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="TABLES">
+            <Component class="javax.swing.JCheckBox" name="EXTANCHORLINKS">
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.TABLES.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.EXTANCHORLINKS.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
-                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.TABLES.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.EXTANCHORLINKS.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
               </Properties>
             </Component>
@@ -233,6 +267,66 @@
                 </Property>
               </Properties>
             </Component>
+            <Component class="javax.swing.JCheckBox" name="ANCHORLINKS">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.ANCHORLINKS.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.ANCHORLINKS.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="ATXHEADERSPACE">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.ATXHEADERSPACE.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.ATXHEADERSPACE.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="FORCELISTITEMPARA">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.FORCELISTITEMPARA.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.FORCELISTITEMPARA.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="RELAXEDHRULES">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.RELAXEDHRULES.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.RELAXEDHRULES.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="TASKLISTITEMS">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.TASKLISTITEMS.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.TASKLISTITEMS.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="TABLES">
+              <Properties>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.TABLES.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+                  <ResourceString bundle="flow/netbeans/markdown/options/Bundle.properties" key="MarkdownPanel.TABLES.toolTipText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="HTML_EXPORT_PANEL">
@@ -252,7 +346,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="HTML_PANEL_HEADER" pref="412" max="32767" attributes="0"/>
+                          <Component id="HTML_PANEL_HEADER" pref="418" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -267,7 +361,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="HTML_PANEL_HEADER" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="316" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="337" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -328,7 +422,7 @@
                                           <Component id="REMOVE_ORDERED_LIST_NUMBER" alignment="1" max="32767" attributes="0"/>
                                           <Component id="REORDER_ORDERED_LIST_NUMBER" alignment="1" max="32767" attributes="0"/>
                                           <Component id="REMOVE_EMPTY_LIST" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="AUTO_ADDITION_LIST" alignment="0" pref="389" max="32767" attributes="0"/>
+                                          <Component id="AUTO_ADDITION_LIST" alignment="0" pref="395" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -351,7 +445,7 @@
                                   </Group>
                                   <Component id="USE_CUSTOM_PREVIEW_REFRESH_INTERVAL" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="159" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="185" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>

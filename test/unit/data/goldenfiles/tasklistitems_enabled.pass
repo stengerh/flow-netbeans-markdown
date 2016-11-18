@@ -1,0 +1,4 @@
+token #0 BULLETLIST [* [x] ]
+token #1 PLAIN [done\n]
+token #2 BULLETLIST [* [ ] ]
+token #3 PLAIN [to do\n]

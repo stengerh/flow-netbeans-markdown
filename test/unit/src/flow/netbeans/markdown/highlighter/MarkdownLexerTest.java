@@ -1,9 +1,11 @@
 package flow.netbeans.markdown.highlighter;
 
+import flow.netbeans.markdown.options.MarkdownGlobalOptions;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import org.netbeans.api.lexer.Language;
 import org.netbeans.api.lexer.TokenHierarchy;
+
+import static org.junit.Assert.*;
 
 public class MarkdownLexerTest extends MarkdownLexerTestBase {
 
@@ -36,5 +38,16 @@ public class MarkdownLexerTest extends MarkdownLexerTestBase {
     @Test
     public void testPlain() throws Exception {
         assertEquals(getGoldenFileContent("plain.pass"), getTestResult("plain.md"));
+    }
+
+    @Test
+    public void testTaskListItemsEnabled() throws Exception {
+        MarkdownGlobalOptions options = MarkdownGlobalOptions.getInstance();
+        options.setTaskListItems(true);
+        try {
+            assertEquals(getGoldenFileContent("tasklistitems_enabled.pass"), getTestResult("tasklistitems.md"));
+        } finally {
+            options.setTaskListItems(false);
+        }
     }
 }

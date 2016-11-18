@@ -195,6 +195,7 @@ public class MarkdownLexerVisitor implements Visitor {
 
     @Override
     public void visit(ListItemNode node) {
+        // if (node instanceof TaskListNode) { ... }
         beginTreeToken(MarkdownTokenId.LISTITEM, node);
         visitChildren(node);
         endTreeToken();

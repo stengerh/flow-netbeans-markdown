@@ -1,4 +1,3 @@
-
 package flow.netbeans.markdown.highlighter;
 
 import java.io.IOException;
@@ -14,6 +13,7 @@ import org.pegdown.Extensions;
  * </ul>
  */
 public class MarkdownLexerVisitorExtensionsTest extends MarkdownLexerVisitorTestSupport {
+
     @Test
     public void testAbbreviationsEnabled() throws IOException {
         runTestWithExtensions("extensions/abbreviations", Extensions.ABBREVIATIONS);
@@ -122,5 +122,15 @@ public class MarkdownLexerVisitorExtensionsTest extends MarkdownLexerVisitorTest
     @Test
     public void testSuppressInlineHtmlDisabled() throws IOException {
         runTestWithExtensions("extensions/suppress_inline_html", 0);
+    }
+
+    @Test
+    public void testTaskListItemsEnabled() throws IOException {
+        runTestWithExtensions("extensions/tasklistitems", Extensions.TASKLISTITEMS);
+    }
+
+    @Test
+    public void testTaskListItemsDisabled() throws IOException {
+        runTestWithExtensions("extensions/tasklistitems", 0);
     }
 }
